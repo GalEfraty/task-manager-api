@@ -13,6 +13,10 @@ app.use(express.json())
 app.use(userRouter)
 app.use(taskRouter)
 
+app.get('', (req, res) =>
+{
+    res.send('welcome to task manager api, created by Gal Efraty')
+})
 
 //server flag
 app.listen(port, () => {
